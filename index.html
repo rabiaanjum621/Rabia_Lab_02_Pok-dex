@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My New PWA</title>
+    <title>My Pokedex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,18 +11,38 @@
     <link rel="icon" type="image/png" href="assets/images/icon.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="assets/images/icon.png" sizes="16x16" />
     <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css" />
     <link rel="stylesheet" type="text/css" href="src/app.css" />
   </head>
 
   <body>
-    <div class="container">
-      <h1>You are Online!</h1>
-      <p>It's time to create an amazing Progressive Web App!</p>
-    </div>
+    <ons-navigator swipeable id="navigator" page="index.html"></ons-navigator>
+    <template id="index.html">
+      <ons-page id="home">
+        <ons-toolbar>
+          <div class="center">My Pokedex</div>
+          </ons-toolbar>
+          <ons-list>
+            <ons-list-header>POKEMON (First 100)</ons-list-header>
+            <ons-list-item id= "item1" modifier="chevron" tappable>Item A</ons-list-item>
+            <ons-list-item id= "item2" modifier="chevron" tappable>Item B</ons-list-item>
+            </ons-list>
+          </ons-page>
+        </template>
+        <template id="details.html">
+          <ons-page id="details_Page">
+            <ons-toolbar>
+              <div class="left"><ons-back-button>Back</ons-back-button></div>
+              <div class="center">Detail Page</div>
+            </ons-toolbar>
+            <p>This is the second page.</p>
+          </ons-page>
+        </template> 
   </body>
 
   <script src="src/app.js"></script>
-
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script type="text/javascript">
     const registerSW = async () => {
       if ("serviceWorker" in navigator) {
