@@ -1,7 +1,7 @@
 {
   "name": "my-new-pwa",
   "short_name": "my-new-pwa",
-  "start_url": "https://github.com/rabiaanjum621/Rabia_Lab_02_Pok-dex",
+  "start_url": "https://rabiaanjum621.github.io/Rabia_Lab_02_Pok-dex/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
@@ -38,5 +38,30 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Open Messages",
+      "short_name": "Messages",
+      "description": "Open the app to your messages",
+      "url": "https://rabiaanjum621.github.io/Rabia_Lab_02_Pok-dex/messages",
+      "icons": [{ "src": "assets/images/messages.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Open Settings",
+      "short_name": "Settings",
+      "description": "Open the app to the settings",
+      "url": "https://rabiaanjum621.github.io/Rabia_Lab_02_Pok-dex/settings",
+      "icons": [{ "src": "assets/images/settings.png", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "https://rabiaanjum621.github.io/Rabia_Lab_02_Pok-dex/index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
