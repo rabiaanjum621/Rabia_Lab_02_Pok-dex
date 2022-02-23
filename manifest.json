@@ -1,7 +1,7 @@
 {
   "name": "my-new-pwa",
   "short_name": "my-new-pwa",
-  "start_url": "https://evanburg.github.io/pwa-boilerplate/",
+  "start_url": "https://github.com/rabiaanjum621/Rabia_Lab_02_Pok-dex",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",

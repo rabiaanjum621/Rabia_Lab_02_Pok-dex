@@ -23,25 +23,41 @@
         <ons-toolbar>
           <div class="center">My Pokedex</div>
           </ons-toolbar>
-          <ons-list>
-            <ons-list-header>POKEMON (First 100)</ons-list-header>
-            <ons-list-item id= "item1" modifier="chevron" tappable>Item A</ons-list-item>
-            <ons-list-item id= "item2" modifier="chevron" tappable>Item B</ons-list-item>
-            </ons-list>
+          <ons-list id="itemsList">
+            <ons-list-header >POKEMON (First 100)</ons-list-header>
+             </ons-list>
           </ons-page>
         </template>
         <template id="details.html">
-          <ons-page id="details_Page">
+          <ons-page id="details">
             <ons-toolbar>
               <div class="left"><ons-back-button>Back</ons-back-button></div>
-              <div class="center">Detail Page</div>
+              <div class="center" id="title"></div>
             </ons-toolbar>
-            <p>This is the second page.</p>
+            <ons-card>
+              <img src="https://pokeapi.co/api/v2/ability/7/" alt="Onsen UI" style="width: 100%">
+              <div id="name">
+                Pokemon name#143
+              </div>
+              <div id="types">
+                <ons-list>
+                  <ons-list-header>TYPES</ons-list-header>
+                </ons-list>
+              </div>
+              <div id="stats">
+                <ons-list>
+                  <ons-list-header>STATS</ons-list-header>
+                  <ons-list-item class="stats_item">
+                    <div>HP </div>
+                    <span class="notification">1</span>
+                    <span class="notification notification--material">10</span> 
+                  </ons-list-item>
+                </ons-list>
+              </div>
+            </ons-card>
           </ons-page>
         </template> 
   </body>
-
-  <script src="src/app.js"></script>
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script type="text/javascript">
     const registerSW = async () => {
@@ -56,4 +72,5 @@
     };
     registerSW();
   </script>
+    <script src="src/app.js"></script>
 </html>

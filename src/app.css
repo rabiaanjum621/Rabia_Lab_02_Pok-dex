@@ -36,3 +36,7 @@ p {
 img {
     width: 150px;
 }
+
+.stats_item{
+    margin: 10;
+}
