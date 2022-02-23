@@ -39,7 +39,9 @@ function getPokemonDetails(itemId) {
     .then((response) => response.json())
     .then((data) => {
       document.getElementById("title").innerHTML = data.species.name;
-     var name = document.getElementById("name");
+      var image = document.getElementById("image");
+      image.src = data.sprites.front_default;
+      var name = document.getElementById("name");
        name.innerHTML = data.species.name + " #" + data.game_indices[0].game_index;
        var types = document.getElementById("types");
        data.types.forEach((element)=> {
@@ -52,6 +54,16 @@ function getPokemonDetails(itemId) {
        data.stats.forEach((element)=> {
            var statItem = document.createElement("ons-list-item")
            statItem.innerHTML = element.stat.name;
+           var spanItem = document.createElement("span");
+           spanItem.className = "notification";
+           spanItem.innerHTML = element.effort;
+           spanItem.style.margin = "10px";
+           statItem.appendChild(spanItem);
+           var spanItem = document.createElement("span");
+           spanItem.className = "notification notification--material";
+           spanItem.innerHTML = element.base_stat;
+           spanItem.style.background = "#2A7DAD"
+           statItem.appendChild(spanItem);
            stats.appendChild(statItem);
        })
     });
