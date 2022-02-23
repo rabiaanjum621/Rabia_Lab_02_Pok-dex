@@ -57,7 +57,7 @@ function getPokemonDetails(itemId) {
            var spanItem = document.createElement("span");
            spanItem.className = "notification";
            spanItem.innerHTML = element.effort;
-           spanItem.style.margin = "10px";
+           spanItem.style.margin = "6px";
            statItem.appendChild(spanItem);
            var spanItem = document.createElement("span");
            spanItem.className = "notification notification--material";
